@@ -1,0 +1,10 @@
+Line 364: Class SIAB.navCtrl of control navCtrl1 was not a loaded control class.
+Line 17: Property Icon in frmTerima had an invalid file reference.
+Line 236: Property MICON in dtlBtn had an invalid file reference.
+Line 296: Property MICON in dtlBtn had an invalid file reference.
+Line 370: The property name _ExtentX in navCtrl1 is invalid.
+Line 371: The property name _ExtentY in navCtrl1 is invalid.
+Line 567: Property Override in mGrid had an invalid file reference.
+Line 568: Property CaptionAppearance in mGrid had an invalid file reference.
+Line 583: Property Override in dGrid had an invalid file reference.
+Line 584: Property CaptionAppearance in dGrid had an invalid file reference.

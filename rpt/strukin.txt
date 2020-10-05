@@ -1,0 +1,28 @@
+	    PT. GRESIK JASATAMA
+	    Operator Terminal Curah Kering
+	    Pelabuhan Gresik
+	    Stasiun Kerja Timbangan
+
+	    Masuk	: <<wmasuk>>
+	    No.Lambung	: <<nolambung>>
+	    No.Polisi   : <<nopol>>
+	    -----------------------------------------
+            Dump TRUK  : <<tara>> Kg
+	    -----------------------------------------
+	    Diterima 	          Operator
+
+	    <Pengemudi>               <<nmoperator>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

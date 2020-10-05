@@ -1,0 +1,33 @@
+	      PT. GRESIK JASATAMA
+	      Operator Terminal Curah Kering
+	      Pelabuhan Gresik
+	      Stasiun Kerja Timbangan
+
+	      Masuk	  : <<wmasuk>>
+	      Keluar	  : <<wkeluar>>
+	      Nomor	  : <<nomer>>
+	      No.Lambung  : <<nolambung>>
+	      No.Polisi	  : <<nopol>>
+	      Nama Muatan : <<barang>>
+	      Dermaga	  : <<nodermaga>>
+	      Perusahaan  : <<pemilik>>
+	       ----------------------------
+        BRUTO    : <<bruto>> Kg
+        TRUK     : <<tara>>  Kg
+        MUATAN   : <<netto>> Kg
+	       ----------------------------
+	       Yang Menyerahkan	     Yang Menerima
+
+	       <PT. Gresik Jasatama>	<EMKL / PT>
+
+
+
+
+
+
+
+
+
+
+
+

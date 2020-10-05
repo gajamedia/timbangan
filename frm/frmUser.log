@@ -1,0 +1,7 @@
+Line 20: Class SIAB.navCtrl of control navCtrl1 was not a loaded control class.
+Line 13: Property Icon in frmUtl_User had an invalid file reference.
+Line 26: The property name _ExtentX in navCtrl1 is invalid.
+Line 27: The property name _ExtentY in navCtrl1 is invalid.
+Line 57: Property Bindings in cmbData had an invalid file reference.
+Line 130: Property Override in mGrid had an invalid file reference.
+Line 131: Property CaptionAppearance in mGrid had an invalid file reference.

@@ -1,0 +1,77 @@
+
+Connected to: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+
+Export file created by EXPORT:V10.02.01 via conventional path
+
+Warning: the objects were exported by CUKER, not by you
+
+import done in WE8MSWIN1252 character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+. importing CUKER's objects into CUKER
+. . importing table              "RF_JADWAL_KAPAL"
+                                                          267 rows imported
+. . importing table                   "RF_LOGGING"
+                                                           97 rows imported
+. . importing table           "RF_PARAM_INTERFACE"
+                                                            2 rows imported
+. . importing table            "RF_TRUK_TRANSAKSI"
+.............................................
+                                                        45037 rows imported
+IMP-00041: Warning: object created with compilation warnings
+ "CREATE TRIGGER "CUKER"."RF_TRUK_TRAKSAKSI_TR_BF""
+ "BEFORE INSERT ON RF_TRUK_TRANSAKSI"
+ "FOR EACH ROW "
+ "  declare"
+ "  total number:=0;"
+ "  log_mssg VARCHAR2(4000);"
+ "begin"
+ "  "
+ "  SELECT OT_RF_Truck_Transact_seq.NEXTVAL INTO :NEW.truck_id FROM DUAL;"
+ "  "
+ "  BEGIN"
+ "  SELECT COUNT(*) INTO total FROM RF_PARAM_INTERFACE"
+ "        WHERE PARAM_CODE = 'LAST_ENTRY' AND PARAM_TYPE = 'TRANS';"
+ "        IF ( total = 0) THEN"
+ "  INSERT INTO RF_PARAM_INTERFACE"
+ "                (PARAM_CODE,"
+ "                PARAM_VALUE,"
+ "                PARAM_TYPE) VALUES "
+ "                ('LAST_ENTRY',"
+ "                :NEW.NOMOR_1B,"
+ "                'TRANS');   "
+ "        END IF;"
+ "        "
+ "        IF (  :NEW.NOMOR_1B IS NOT NULL) THEN"
+ "                UPDATE RF_PARAM_INTERFACE SET PARAM_VALUE = :NEW.NOMOR_1B"
+ "                WHERE PARAM_CODE = 'LAST_ENTRY' AND PARAM_TYPE = 'TRANS';"
+ "         END IF;"
+ " EXCEPTION WHEN OTHERS THEN"
+ " log_mssg := SQLERRM;"
+ "        INSERT INTO RF_LOGGING (PROC_TYPE,"
+ "                                PROC_NAME,"
+ "                                PROC_VALUE1,"
+ "                                PROC_VALUE2)"
+ "                                VALUES"
+ "                                ('LOG_PROCESS',"
+ "                                 'INSERT LAST ORDER NO '||:NEW.NOMOR_1B,"
+ "                                 log_mssg,"
+ "                                 TO_CHAR(SYSDATE, 'DD-MM-YYYY HH24:MI:SS'))"
+ ";"
+ "END;"
+ ""
+ " EXCEPTION WHEN OTHERS THEN"
+ " log_mssg := SQLERRM;"
+ "        INSERT INTO RF_LOGGING (PROC_TYPE,"
+ "                                PROC_NAME,"
+ "                                PROC_VALUE1,"
+ "                                PROC_VALUE2)"
+ "                                VALUES"
+ "                                ('LOG_PROCESS',"
+ "                                 'BEFORE INSERT TRANSACT : '||:NEW.truck_id"
+ ","
+ "                                 log_mssg,"
+ "                                 TO_CHAR(SYSDATE, 'DD-MM-YYYY HH24:MI:SS'))"
+ ";"
+ ""
+ "END;"
+Import terminated successfully with warnings.
